@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">busSchedulerTw</string>
+    <string name="homePage">homePage</string>
+    <string name="searchPage">searchPage</string>
+    <string name="alarmPage">alarmPage</string>
+</resources>
