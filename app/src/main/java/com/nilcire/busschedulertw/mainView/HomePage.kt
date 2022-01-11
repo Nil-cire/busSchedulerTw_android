@@ -14,9 +14,9 @@ import com.nilcire.busschedulertw.navView.items
 import com.nilcire.busschedulertw.utilView.MainToolBar
 
 @Composable
-fun HomePage(navController: NavHostController) {
+fun HomePage(navController: NavHostController, viewModel: HomePageViewModel) {
 
-    val viewModel: HomePageViewModel by lazy { ComposeViewModel.Factory.create(HomePageViewModel::class.java) }
+//    val viewModel: HomePageViewModel by lazy { ComposeViewModel.Factory.create(HomePageViewModel::class.java) }
 //    val viewModel: HomePageViewModel = ComposeViewModel.Factory.create(HomePageViewModel::class.java)
 
     Scaffold(
@@ -25,12 +25,12 @@ fun HomePage(navController: NavHostController) {
         bottomBar = { MainButtonNavBar(navController, items) }
     )
 
-    DisposableEffect(key1 = MainActivity.state) {
-        viewModel.onStart()
-        onDispose {
-            viewModel.onStop()
-        }
-    }
+    //    DisposableEffect(key1 = MainActivity.state) {
+    //        viewModel.onStart()
+    //        onDispose {
+    //            viewModel.onStop()
+    //        }
+    //    }
 
 
 }

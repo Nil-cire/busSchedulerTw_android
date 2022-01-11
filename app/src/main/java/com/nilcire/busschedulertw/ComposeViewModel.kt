@@ -1,9 +1,10 @@
 package com.nilcire.busschedulertw
 
 import androidx.lifecycle.ViewModel
-import kotlin.reflect.KClass
 
 abstract class ComposeViewModel: ViewModel(){
+
+    var state: ComposeViewModelState = ComposeViewModelState.IsStarted
 
     abstract fun onStart()
     abstract fun onStop()
@@ -14,4 +15,9 @@ abstract class ComposeViewModel: ViewModel(){
         }
     }
 
+}
+
+enum class ComposeViewModelState {
+    IsStarted,
+    IsStopped,
 }

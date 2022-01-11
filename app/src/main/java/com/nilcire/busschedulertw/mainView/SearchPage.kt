@@ -12,9 +12,9 @@ import com.nilcire.busschedulertw.navView.items
 import com.nilcire.busschedulertw.utilView.MainToolBar
 
 @Composable
-fun SearchPage(navController: NavHostController) {
+fun SearchPage(navController: NavHostController, viewModel: SearchPageViewModel) {
 
-    val viewModel: SearchPageViewModel by lazy { ComposeViewModel.Factory.create(SearchPageViewModel::class.java) }
+//    val viewModel: SearchPageViewModel by lazy { ComposeViewModel.Factory.create(SearchPageViewModel::class.java) }
 
 
     Scaffold(
@@ -23,10 +23,10 @@ fun SearchPage(navController: NavHostController) {
         bottomBar = { MainButtonNavBar(navController, items) }
     )
 
-    DisposableEffect(key1 = MainActivity.state) {
-        viewModel.onStart()
-        onDispose {
-            viewModel.onStop()
-        }
-    }
+//    DisposableEffect(key1 = MainActivity.state) {
+//        viewModel.onStart()
+//        onDispose {
+//            viewModel.onStop()
+//        }
+//    }
 }
