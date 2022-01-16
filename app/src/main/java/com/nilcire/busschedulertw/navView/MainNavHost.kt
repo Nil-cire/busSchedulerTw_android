@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.google.accompanist.pager.ExperimentalPagerApi
 import com.nilcire.busschedulertw.ComposeViewModel
 import com.nilcire.busschedulertw.MainActivity
 import com.nilcire.busschedulertw.Screen
@@ -12,6 +13,7 @@ import com.nilcire.busschedulertw.mainView.HomePageViewModel
 import com.nilcire.busschedulertw.mainView.SearchPage
 import com.nilcire.busschedulertw.mainView.SearchPageViewModel
 
+@ExperimentalPagerApi
 @Composable
 fun MainNavHost(navController: NavHostController) {
 

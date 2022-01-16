@@ -1,12 +1,20 @@
 package com.nilcire.busschedulertw.mainView
 
 import android.util.Log
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.nilcire.busschedulertw.ComposeViewModel
 import kotlinx.coroutines.*
 
 class HomePageViewModel: ComposeViewModel() {
+
+    var count: MutableLiveData<Int> = MutableLiveData(0)
+
+    fun addOne() {
+        count.value = count.value?.plus(1)
+    }
 
     var job: Job = viewModelScope.launch(Dispatchers.Default) {
         while (isActive) {

@@ -18,7 +18,7 @@ fun SearchPage(navController: NavHostController, viewModel: SearchPageViewModel)
 
 
     Scaffold(
-        topBar = { MainToolBar(name = "SearchPage") },
+        topBar = { MainToolBar(name = "SearchPage", true) },
         content = { Text(text = "SearchPage") },
         bottomBar = { MainButtonNavBar(navController, items) }
     )
