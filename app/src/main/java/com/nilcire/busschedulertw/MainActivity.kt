@@ -23,6 +23,7 @@ import com.nilcire.busschedulertw.mainView.SearchPage
 import com.nilcire.busschedulertw.navView.MainNavHost
 import com.nilcire.busschedulertw.ui.theme.BusSchedulerTwTheme
 import androidx.lifecycle.ViewModelProvider
+import com.google.accompanist.pager.ExperimentalPagerApi
 import com.nilcire.busschedulertw.mainView.SearchPageViewModel
 
 
@@ -33,6 +34,7 @@ class MainActivity : ComponentActivity() {
     }
     lateinit var navController: NavHostController;
 
+    @ExperimentalPagerApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -59,6 +61,7 @@ fun Greeting(name: String) {
 
 
 
+@ExperimentalPagerApi
 @Composable
 fun MainActivityBaseView(title: String, navController: NavHostController) {
 
@@ -68,6 +71,7 @@ fun MainActivityBaseView(title: String, navController: NavHostController) {
 
 
 
+@ExperimentalPagerApi
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
