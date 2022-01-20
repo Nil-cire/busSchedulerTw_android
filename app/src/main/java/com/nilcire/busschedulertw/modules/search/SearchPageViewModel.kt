@@ -1,7 +1,6 @@
-package com.nilcire.busschedulertw.mainView
+package com.nilcire.busschedulertw.modules.search
 
 import android.util.Log
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.nilcire.busschedulertw.ComposeViewModel
 import kotlinx.coroutines.*

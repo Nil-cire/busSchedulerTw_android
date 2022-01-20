@@ -1,4 +1,4 @@
-package com.nilcire.busschedulertw.mainView.home
+package com.nilcire.busschedulertw.modules.home
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.lazy.LazyColumn

@@ -1,4 +1,4 @@
-package com.nilcire.busschedulertw.mainView.home
+package com.nilcire.busschedulertw.modules.home
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData

@@ -4,27 +4,15 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.annotation.StringRes
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.material.*
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.navigation.NavDestination.Companion.hierarchy
-import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
-import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.nilcire.busschedulertw.mainView.HomePage
-import com.nilcire.busschedulertw.mainView.SearchPage
 import com.nilcire.busschedulertw.navView.MainNavHost
 import com.nilcire.busschedulertw.ui.theme.BusSchedulerTwTheme
-import androidx.lifecycle.ViewModelProvider
 import com.google.accompanist.pager.ExperimentalPagerApi
-import com.nilcire.busschedulertw.mainView.SearchPageViewModel
 
 
 class MainActivity : ComponentActivity() {
@@ -34,6 +22,7 @@ class MainActivity : ComponentActivity() {
     }
     lateinit var navController: NavHostController;
 
+    @ExperimentalFoundationApi
     @ExperimentalPagerApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,6 +50,7 @@ fun Greeting(name: String) {
 
 
 
+@ExperimentalFoundationApi
 @ExperimentalPagerApi
 @Composable
 fun MainActivityBaseView(title: String, navController: NavHostController) {
@@ -71,6 +61,7 @@ fun MainActivityBaseView(title: String, navController: NavHostController) {
 
 
 
+@ExperimentalFoundationApi
 @ExperimentalPagerApi
 @Preview(showBackground = true)
 @Composable
