@@ -1,38 +1,21 @@
-package com.nilcire.busschedulertw.mainView
+package com.nilcire.busschedulertw.mainView.home
 
-import android.graphics.BitmapFactory
-import androidx.annotation.IntegerRes
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.*
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.PlayArrow
-import androidx.compose.material.icons.filled.Share
-import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.runtime.*
 import androidx.compose.runtime.livedata.observeAsState
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.lifecycle.viewModelScope
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.PagerState
-import com.google.android.material.tabs.TabItem
-import com.nilcire.busschedulertw.ComposeViewModel
-import com.nilcire.busschedulertw.MainActivity
 import com.nilcire.busschedulertw.navView.MainButtonNavBar
 import com.nilcire.busschedulertw.navView.items
 import com.nilcire.busschedulertw.utilView.MainToolBar
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 @ExperimentalPagerApi
 @Composable
@@ -47,7 +30,7 @@ fun HomePage(navController: NavHostController, viewModel: HomePageViewModel) {
     Scaffold(
         topBar = { MainToolBar(name = "HomePage", false) },
 //        content = { Text(text = "HomePage") },
-        content = {HomePageBody(viewModel, pagerState)},
+        content = { HomePageBody(viewModel, pagerState) },
         bottomBar = { MainButtonNavBar(navController, items) }
     )
 
@@ -100,8 +83,12 @@ fun HomePageBody(viewModel: HomePageViewModel, pagerState: PagerState) {
             }
         }
         when (pagerState.currentPage) {
-            0 -> {SearchHistory(fakeDataList)}
-            1 -> {AlarmHistory(alarmFakeDataList)}
+            0 -> {
+                SearchHistory(fakeDataList)
+            }
+            1 -> {
+                AlarmHistory(alarmFakeDataList)
+            }
         }
 //        SearchHistory(fakeDataList)
 //        HorizontalPager(state = pagerState) {
